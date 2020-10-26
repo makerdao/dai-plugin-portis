@@ -10,7 +10,8 @@ export default function (maker, _, pluginComfig = {}) {
     log('Plugin Initiated');
 
     maker.service('accounts', true).addAccountType(ACCOUNT_TYPE_PORTIS, async (settings) => {
-        const portis = new Portis('e0ac7d6b-a19b-4f61-928d-fb97b15c424a', 'mainnet');
+        const networkName = maker.service('web3').networkName;
+        const portis = new Portis('e0ac7d6b-a19b-4f61-928d-fb97b15c424a', networkName);
         const web3 = new Web3(portis.provider);
 
         const subprovider = web3.currentProvider;
