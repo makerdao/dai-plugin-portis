@@ -1,6 +1,6 @@
 {
   "name": "@makerdao/dai-plugin-portis",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "files": [
     "dist/**/*"
   ],
